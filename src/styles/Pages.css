@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
+    padding: 40px;
 }
 
 
@@ -23,7 +23,7 @@
 .page-container {
     max-width: 960px;
     height: 530px;
-    margin: 20px auto;
+    margin: 0px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -49,7 +49,7 @@
 }
 .hero-banner-image {
     width: 100%;
-    height: 100%;
+  height: 100%;
     object-fit: fill;
     filter: brightness(60%);
 }
@@ -167,19 +167,21 @@ img {
 
 .pcontainer {
     max-width: 960px;
-    height: 670px;
-    margin: 20px auto;
+    height: 530px;
+    margin: 0px auto ;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 12px #0000000d;
+    overflow-y: auto;
+    
 }
 
 .ccontainer {
     max-width: 960px;
     height: 1590px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 2az0px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 12px #0000000d;
@@ -212,12 +214,10 @@ img {
     box-shadow: 0 4px 12px #0000000d;
 }
 .main-content-scrollable {
-    max-height: 500px;
-    /* overflow-y: auto; */
+    /* max-height: 500px; */    /* Remove or comment out this line */
+    /* overflow-y: auto; */     /* Remove or comment out this line */
     padding-right: 15px;
     box-sizing: border-box;
-    scrollbar-width: thin;
-    scrollbar-color: #888 #f1f1f1;
 }
 
 .main-content-scrollable::-webkit-scrollbar {
@@ -281,6 +281,80 @@ img {
 .fee-table th, .fee-table td {
   border: 1px solid #333;
   padding: 8px;
+}/* Responsive container and image adjustments */
+@media (max-width: 1024px) {
+  .page-container,
+  .pcontainer,
+  .ccontainer,
+  .contact-container {
+    max-width: 98vw;
+    padding: 10px;
+  }
+  .hero-section {
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+  }
+  .hero-banner-image {
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container,
+  .pcontainer,
+  .ccontainer,
+  .contact-container {
+    max-width: 100vw;
+    padding: 6px;
+  }
+  .hero-section {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    max-width: 100vw;
+    margin-bottom: 20px;
+  }
+  .hero-banner-image {
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+  }
+  #i {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  #h1, #h2 {
+    font-size: 1.3em;
+    text-align: center;
+  }
+  .fee-table {
+    font-size: 1em;
+    overflow-x: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container,
+  .pcontainer,
+  .ccontainer,
+  .contact-container {
+    padding: 2px;
+  }
+  .hero-section {
+    margin-bottom: 10px;
+  }
+  .hero-overlay-text h1 {
+    font-size: 1.5em;
+  }
+  .fee-table th, .fee-table td {
+    padding: 4px;
+    font-size: 0.95em;
+  }
 }
 
 

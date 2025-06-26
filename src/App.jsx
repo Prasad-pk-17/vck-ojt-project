@@ -7,6 +7,7 @@ import CoursesPage from "./pages/CoursesPage";
 import PGAdmissionPage from "./pages/PGAdmissionPage";
 
 import './styles/Pages.css' 
+import ChatbotComponent from "./components/Chatbot/ChatbotComponent";
 
   const App = () => {
 
@@ -22,6 +23,7 @@ import './styles/Pages.css'
             <Route path="/courses" element={<CoursesPage/>}/>
             <Route path="/admission" element={<PGAdmissionPage/>}/>
           </Routes>
+          <ChatbotComponent/>
         </Router>
 
       </div>

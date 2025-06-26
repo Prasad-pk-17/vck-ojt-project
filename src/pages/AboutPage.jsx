@@ -8,7 +8,7 @@ const AboutPage = () => {
         <Header/>
           <div className="content">
           <div className="page-container">
-            <div class="main-content-scrollable"> 
+            <div className="main-content-scrollable"> 
           <div className="hero-section">
           <h1 id="h2">About Vivekanand College</h1><br></br>
           <p id="p">Vivekanand College stands as a beacon of knowledge and integrity, committed to delivering transformative education since its <br></br>inception in [Year of Establishment, e.g., 1980]. Located in the bustling heart of [City/Area, e.g., Chembur, Mumbai], our college has <br></br>consistently strived to uphold the highest standards of academic rigor and ethical values.</p><br></br>

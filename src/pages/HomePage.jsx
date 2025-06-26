@@ -1,4 +1,4 @@
-import Footer1 from "../components/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header"
 
 const HomePage = () => {
@@ -9,7 +9,8 @@ const HomePage = () => {
             
             <Header/>
                 <div className="content">
-                <div style={{marginTop:'50px',maxHeight:'76vh'}} className="page-container">
+
+                <div style={{marginTop:'50px',maxHeight:'66vh'}} className="pcontainer">
                 <div class="main-content-scrollable">
                 <div className="hero-section">
                     <img alt="vivekanand college campus" className="hero-banner-image" src="images\clg.png"></img>
@@ -44,7 +45,7 @@ const HomePage = () => {
                 </div>
                 </div>
                 </div>
-                <Footer1/>               
+                <Footer />               
                 
         </div>
         

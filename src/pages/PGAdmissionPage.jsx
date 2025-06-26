@@ -5,6 +5,7 @@ const PGAdmissionPage = () => {
         <div>
             <Header />
             <div className="content" style={{ background: "#2fd3d3", minHeight: "100vh", padding: "30px 0" }}>
+                <div className="page-container">
                 <div style={{
                     background: "#fff",
                     borderRadius: "10px",
@@ -93,6 +94,7 @@ const PGAdmissionPage = () => {
                         <a href="/Contact" style={{ color: "purple", textDecoration: "underline" }}>Contact us</a>
                         &nbsp;directly.
                     </p>
+                </div>
                 </div>
             </div>
             <Footer1/>
