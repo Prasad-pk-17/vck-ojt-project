@@ -110,9 +110,9 @@ const CoursesPage = () => {
                         <div className="call-to-action">
                             <p id="p">Have questions about a specific course?</p>
                             <br />
-                            <a className="primary-btn" href="/Contact" data-discover="true">
+                            <Link to="/Contact" className="primary-btn"  data-discover="true">
                             Inquire About Courses
-                            </a>
+                            </Link>
                     </div>  </div>
                     </div>
                 </div>
