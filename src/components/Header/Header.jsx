@@ -1,61 +1,79 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import './Header.css';
-
-const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/courses', label: 'Courses' },
-    { path: '/contact', label: 'Contact' }
-  ];
-
+// / src/components/Header/Header.jsx
+import React, { useState } from "react"; // Import useState
+import { Link } from "react-router-dom";
+import "./Header.css";
+function Header() {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false); // State to control drawer visibility
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+  // Function to close drawer when a link is clicked
+  const closeDrawer = () => {
+    setIsDrawerOpen(false);
+  };
   return (
-    <header className="header">
-      <div className="header-container">
-        <div className="college-name">
-          <NavLink to="/" className="h" data-discover="true">
-         Vivekanand college
-        </NavLink>
-        </div>
-        <button
-          className={`hamburger${menuOpen ? ' open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle navigation"
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-      
-        <nav className={`navbar${menuOpen ? ' open' : ''}`}>
-          <ul>
-            {navItems.map((item) => (
-              <li key={item.path}>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? 'nav-link active' : 'nav-link'
-                  }
-                  to={item.path}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item.label}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-          {/* Apply Now button for mobile drawer */}
-          <a href="/admission" className="apply-now-btn mobile">Apply Now</a>
-        </nav>
-        {/* Apply Now button for desktop */}
-        <a href="/admission" className="apply-now-btn desktop">Apply Now</a>
+    <header className="main-header">
+      {" "}
+      {/* Add a wrapper for header content */}
+      <div className="college-name">
+        <Link to="/">Vivekanand College</Link>{" "}
+        {/* College Name/Logo for desktop & mobile */}
       </div>
+      {/* Desktop Navigation */}
+      <nav className="navbar desktop-nav">
+        <Link to="/" className="nav-item">
+          Home
+        </Link>
+        <Link to="/about" className="nav-item">
+          About
+        </Link>
+        <Link to="/courses" className="nav-item">
+          Courses
+        </Link>
+        <Link to="/contact" className="nav-item">
+          Contact
+        </Link>
+        <Link to="/admission" className="nav-item btn primary-btn">
+          Apply Now!
+        </Link>{" "}
+        {/* Apply Now button */}
+      </nav>
+      {/* Mobile Hamburger Button */}
+      <button className="hamburger-menu" onClick={toggleDrawer}>
+        <span className="hamburger-icon"></span>
+        <span className="hamburger-icon"></span>
+        <span className="hamburger-icon"></span>
+      </button>
+      {/* Mobile Drawer Navigation */}
+      <nav className={`drawer-nav ${isDrawerOpen ? "open" : ""}`}>
+        <button className="close-drawer-btn" onClick={toggleDrawer}>
+          ✕
+        </button>
+        <Link to="/" className="nav-item" onClick={closeDrawer}>
+          Home
+        </Link>
+        <Link to="/about" className="nav-item" onClick={closeDrawer}>
+          About
+        </Link>
+        <Link to="/courses" className="nav-item" onClick={closeDrawer}>
+          Courses
+        </Link>
+        <Link to="/contact" className="nav-item" onClick={closeDrawer}>
+          Contact
+        </Link>
+        <Link
+          to="/admission"
+          className="nav-item btn primary-btn"
+          onClick={closeDrawer}
+        >
+          Apply Now!
+        </Link>
+      </nav>
+      {/* Overlay when drawer is open */}
+      {isDrawerOpen && (
+        <div className="drawer-overlay" onClick={toggleDrawer}></div>
+      )}
     </header>
   );
-
-  
-};
-
+}
 export default Header;

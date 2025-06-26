@@ -1,4 +1,4 @@
-import Footer from "../components/Footer/Footer";
+import Footer1 from "../components/Footer/Footer";
 import Header from "../components/Header/Header"
 
 const HomePage = () => {
@@ -9,11 +9,10 @@ const HomePage = () => {
             
             <Header/>
                 <div className="content">
-
-                <div style={{marginTop:'50px',maxHeight:'66vh'}} className="pcontainer">
+                <div style={{marginTop:'50px',maxHeight:'66vh'}} className="page-container">
                 <div class="main-content-scrollable">
                 <div className="hero-section">
-                    <img alt="vivekanand college campus" className="hero-banner-image" src="images\clg.png"></img>
+                    <img alt="vivekanand college campus" className="hero-banner-image" src="images\chatbot.png"></img>
                     <div className="hero-overlay-text">
                         <h1>Welcome to Vivekanand College!</h1>
                         <p id="z">Your journey to excellence starts here</p><br></br>
@@ -37,15 +36,15 @@ const HomePage = () => {
                 <img id="i"src="images/campus.jpg"></img><br></br>
                 <p id="p">Explore our vibrant campus and state-of-the-art facilities designed to enhance your learning experience and personal growth.</p>
                 <div className="call-to-action">
-                    <p id="p">Ready to explorenour course?</p>
-                    <a class="primary-btn" href="/Courses" data-discover="true">Explore Courese</a>
+                    <p id="p">Ready to explorenour courses?</p>
+                    <a class="primary-btn" href="/Courses" data-discover="true">Explore Coureses</a>
 
 
                 </div>
                 </div>
                 </div>
                 </div>
-                <Footer />               
+                <Footer1/>               
                 
         </div>
         

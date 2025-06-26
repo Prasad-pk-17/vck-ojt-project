@@ -1,213 +1,201 @@
-.header-container {
+/* Global Header Wrapper */
+.main-header {
+  background-color: #007BFF;
+  /* Primary blue background */
+  color: white;
+  padding: 15px 20px;
   display: flex;
-  align-items:last baseline;
-  
   justify-content: space-between;
-  padding: 0 32px;
+  /* Space out college name and nav */
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  /* Make header sticky */
+  top: 0;
+  z-index: 999;
+  /* Ensure header is above other content */
 }
 
 .college-name {
-  font-size: 2.5rem;
+  font-size: 1.8em;
   font-weight: bold;
-  color: #fff;
-  flex:1;
-  
-}
-.h {
-  font-size:60%;
-  font-weight:bold;
-  color:#ffff;
-  text-align:left;
-  font-family:arial;
-  text-decoration: None;;
-  
-
 }
 
-
-
-.navbar {
-  margin-left: auto; /* Pushes nav to the right */
+.college-name a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
-.navbar ul {
+
+.college-name a:hover {
+  color: #E0E0E0;
+}
+
+/* Desktop Navigation Styles (default) */
+.desktop-nav {
   display: flex;
-  gap: 32px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  /* Show by default */
+  gap: 25px;
+  /* Space between links */
+  align-items: center;
 }
 
-.nav-link {
-  color:black;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding-bottom: 4px;
- 
-}
-
-.nav-link.active {
-  border-bottom: 3px solid #fff;
-  font-weight: bold;
-}
-
-.apply-now-btn {
-  background: #28a745;
-  color: #fff;
-  padding: 10px 22px;
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-left: 32px;
-  transition: background 0.2s;
-  font-size: 1.1rem;
-}
-.apply-now-btn:hover {
-  background: #218838;
-}
-
-.header {
-  background: #0a89ff; /* or your preferred blue */
-  width: 100%;
-  height:70px;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
-
-.p {
-    text-align:left;
-    font-family: 'Arial', sans-serif;
-    font-size: 36px;
-    
-}
 .nav-item {
-    text-align: right;
-    color: hsl(0, 28%, 53%);
-    text-decoration: none;
-    font-weight: 500;
-    padding: 5px 0;
-    transition: color .3s ease, border-bottom .3s ease;
+  color: white;
+  font-size: arial;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
-/* ...existing code... */
 
-.hamburger {
+.nav-item:hover {
+  color: #E0E0E0;
+  border-bottom: 2px solid #E0E0E0;
+}
+
+/* Primary Button (e.g., Apply Now) */
+.btn.primary-btn {
+  background-color: #28A745;
+  /* Green */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.btn.primary-btn:hover {
+  background-color: #218838;
+  /* Darker green */
+}
+
+/* Hamburger Menu Button (hidden by default on desktop) */
+.hamburger-menu {
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
+  /* Hide on desktop */
   background: none;
   border: none;
   cursor: pointer;
-  margin-left: 16px;
-  z-index: 20;
+  padding: 10px;
+  position: relative;
+  z-index: 1002;
+  /* Ensure it's above the drawer if needed */
 }
-.hamburger span {
-  height: 10px;
-  width: 100%;
-  background: hsl(0, 67%, 1%);
-  margin: 4px 0;
-  border-radius: 2px;
-  transition: 0.3s;
+
+.hamburger-icon {
   display: block;
-}
-.hamburger.open span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.open span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: all 0.3s ease;
 }
 
-/* Responsive styles */
-@media (max-width: 900px) {
-  .navbar {
-    position:fixed;
-    top: 4px;
-    right: 0;
-    background:rgb(252, 245, 245);
-    width: 180px;
-    height:900px;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 80px 0 24px 24px;
-    box-shadow: 0 4px 12px #0002;
-    transform: translateX(100%);
-    transition: transform 0.3s;
-    z-index: 10;
-  }
-  .navbar.open {
-    transform: translateX(0);
-  }
-  .navbar ul {
-    flex-direction: column;
-    gap: 18px;
-  }
-  .apply-now-btn {
-    display:inline-block;
+/* Drawer Navigation (hidden by default) */
+.drawer-nav {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  /* Start off-screen to the right */
+  width: 200px;
+  /* Width of the drawer */
+  height: 100%;
+  background-color: #F8F9FA;
+  /* Light background for drawer */
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  /* Slide-in animation */
+  z-index: 1001;
+  /* Above page content, below overlay */
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  /* Space for close button/header */
+}
 
-  }
-  
-  .hamburger {
-    display: flex;
-  }
-}.apply-now-btn.mobile {
+.drawer-nav.open {
+  right: 0;
+  /* Slide in when open */
+}
+
+.drawer-nav .nav-item {
+  color: #343A40;
+  /* Darker text for drawer links */
+  padding: 15px 20px;
+  border-bottom: 1px solid #E0E0E0;
+  width: 100%;
+  /* Full width links */
+  box-sizing: border-box;
+  /* Include padding in width */
+}
+
+.drawer-nav .nav-item:hover {
+  background-color: #E9ECEF;
+  color: #007BFF;
+  border-bottom: 1px solid #E0E0E0;
+  /* Reset border for hover if needed */
+}
+
+.drawer-nav .nav-item.btn.primary-btn {
+  /* margin: 50px; Space for button in drawer */
+
+  text-align: center;
+}
+
+/* Close button inside drawer */
+.close-drawer-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #343A40;
+  cursor: pointer;
+  z-index: 1010;
+}
+
+/* Overlay when drawer is open */
+.drawer-overlay {
   display: none;
-  margin-inline-start: 10px;
-}
-.apply-now-btn.desktop {
-  display: inline-block;
+  /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black */
+  z-index: 1000;
+  /* Below drawer, above page content */
 }
 
-@media (max-width: 900px) {
-  .apply-now-btn.desktop {
+.drawer-nav.open+.drawer-overlay {
+  display: block;
+  /* Show when drawer is open */
+}
+
+/* --- Media Queries for Mobile --- */
+@media (max-width: 768px) {
+  .desktop-nav {
     display: none;
+    /* Hide desktop nav on mobile */
   }
-  .apply-now-btn.mobile {
+
+  .hamburger-menu {
     display: block;
-    margin: 24px 0 0 0;
-    width: 100%;
-    text-align: center;
-    
+    /* Show hamburger on mobile */
   }
-}
-/* Default: white nav links for desktop */
-.nav-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding-bottom: 4px;
-  transition: color 0.2s;
-}
 
-/* Hamburger/mobile: black nav links */
-@media (max-width: 900px) {
-  .navbar ul {
-    flex-direction: column;
-    gap: 18px;
+  .main-header {
+    justify-content: space-between;
+    /* Ensure name and hamburger are spaced */
   }
-  .nav-link {
-    color: #111 !important; /* Black for mobile menu */
-  }
-}
-.nav-link {
-  color: #e3e7eb;           /* Change this to your desired color */
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding-bottom: 4px;
-  transition: color 0.2s;
-  
-}
 
-.nav-link:hover,
-.nav-link.active {
-  color: hsl(150, 12%, 97%);           /* Color on hover/active (green example) */
-  border-bottom: 3px solid #180808;
-  font-weight: bold;
+  .college-name {
+    font-size: 1.5em;
+    /* Adjust college name size on mobile */
+  }
 }
