@@ -1,5 +1,6 @@
 import Header from "../components/Header/Header";
 import Footer1 from "../components/Footer/Footer";
+import { Link } from "react-router-dom";
 const CoursesPage = () => {
     return (
         <div>
