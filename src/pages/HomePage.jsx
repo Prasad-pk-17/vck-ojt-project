@@ -37,7 +37,7 @@ const HomePage = () => {
                 <p id="p">Explore our vibrant campus and state-of-the-art facilities designed to enhance your learning experience and personal growth.</p>
                 <div className="call-to-action">
                     <p id="p">Ready to explorenour courses?</p>
-                    <Link to="/Courses" class="primary-btn"  data-discover="true">Explore Coureses</Link>
+                    <Link to="/Courses" class="primary-btn">Explore Coureses</Link>
 
 
                 </div>
