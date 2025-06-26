@@ -12,7 +12,7 @@ const HomePage = () => {
                 <div style={{marginTop:'50px',maxHeight:'66vh'}} className="page-container">
                 <div class="main-content-scrollable">
                 <div className="hero-section">
-                    <img alt="vivekanand college campus" className="hero-banner-image" src="images\chatbot.png"></img>
+                    <img alt="vivekanand college campus" className="hero-banner-image" src="images\clg.png"></img>
                     <div className="hero-overlay-text">
                         <h1>Welcome to Vivekanand College!</h1>
                         <p id="z">Your journey to excellence starts here</p><br></br>
