@@ -9,8 +9,8 @@ const HomePage = () => {
             
             <Header/>
                 <div className="content">
-                <div style={{marginTop:'50px',maxHeight:'66vh'}} className="page-container">
-                <div class="main-content-scrollable">
+                <div style={{marginTop:'50px'}} className="page-container">
+                <div className="main-content-scrollable">
                 <div className="hero-section">
                     <img alt="vivekanand college campus" className="hero-banner-image" src="images\clg.png"></img>
                     <div className="hero-overlay-text">
@@ -36,8 +36,8 @@ const HomePage = () => {
                 <img id="i"src="images/campus.jpg"></img><br></br>
                 <p id="p">Explore our vibrant campus and state-of-the-art facilities designed to enhance your learning experience and personal growth.</p>
                 <div className="call-to-action">
-                    <p id="p">Ready to explorenour courses?</p>
-                    <Link to="/Courses" class="primary-btn">Explore Coureses</Link>
+                    <p id="p">Ready to explore our courses?</p>
+                    <Link to="/Courses" className="primary-btn">Explore Courses</Link>
 
 
                 </div>

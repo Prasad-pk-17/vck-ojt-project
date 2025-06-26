@@ -7,7 +7,7 @@ const CoursesPage = () => {
             <Header />
             <div className="content">
                 <div className="page-container">
-                    <div class="main-content-scrollable">
+                    <div className="main-content-scrollable">
                     <div className="hero-section">
                         <h1 id="h2">Our Academic Programs</h1>
                         <br />
