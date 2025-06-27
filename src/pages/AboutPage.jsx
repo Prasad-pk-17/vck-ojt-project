@@ -1,4 +1,4 @@
-import Footer from "../components/Footer/Footer";
+import Footer1 from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 
 const AboutPage = () => {
@@ -32,7 +32,7 @@ const AboutPage = () => {
             </div>
         </div>
        
-          <Footer/>
+          <Footer1/>
       </div>
 
     )

@@ -97,7 +97,7 @@ const PGAdmissionPage = () => {
                 </div>
                 </div>
             </div>
-            <Footer1/>
+            <Footer1 />
         </div>
     );
 };
