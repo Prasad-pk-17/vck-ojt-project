@@ -7,19 +7,6 @@
     padding: 40px;
 }
 
-
-
-
-.primary-btn {
-    background-color: #1bd030;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color .3s ease;
-    font-weight: 700;
-}
-
 .page-container {
     max-width: 960px;
     height: 530px;
@@ -162,30 +149,19 @@ img {
     color:white;
 }
 
-
-
-
-.pcontainer {
-    max-width: 960px;
-    height: 530px;
-    margin: 0px auto ;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px #0000000d;
-    overflow-y: auto;
-    
+.primary-btn {
+    background-color: #1bd030;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color .3s ease;
+    font-weight: 700;
 }
 
-.ccontainer {
-    max-width: 960px;
-    height: 1590px;
-    margin: 20px auto;
-    padding: 2az0px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px #0000000d;
-}
+
+
+
 
 .hero-section > ul {
   text-align: left;
@@ -204,15 +180,8 @@ img {
     margin-bottom: 15px;
 }
 
-.contact-container {
-    max-width: 960px;
-    height: 790px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px #0000000d;
-}
+
+
 .main-content-scrollable {
     /* max-height: 500px; */    /* Remove or comment out this line */
     /* overflow-y: auto; */     /* Remove or comment out this line */
