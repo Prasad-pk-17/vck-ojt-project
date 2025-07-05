@@ -44,7 +44,7 @@ import { useState } from "react";
             <Route path="/about" element={<AboutPage/>}/>
             <Route path="/contact" element={<ContactPage/>}/>
             <Route path="/courses" element={<CoursesPage/>}/>
-            <Route path="/admission" element={<PGAdmissionPage/>}/>
+            <Route path="/admissions" element={<PGAdmissionPage/>}/>
           </Routes>
           <ChatbotComponent/>
         </Router>

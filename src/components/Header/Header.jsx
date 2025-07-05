@@ -33,7 +33,7 @@ function Header() {
         <Link to="/contact" className="nav-item">
           Contact
         </Link>
-        <Link to="/admission" className="nav-item btn primary-btn">
+        <Link to="/admissions" className="nav-item btn primary-btn">
           Apply Now!
         </Link>{" "}
         {/* Apply Now button */}
